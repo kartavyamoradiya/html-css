@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/slick.css">
+</head>
+<body>
+    <style>
+        body { padding: 0; margin: 0; }
+        .slick-slider .item { padding: 0 10px; }
+        .slick-slider .item img { width: 100%; }
+    </style>
+    <div class="slick-slider">
+        <div class="item">
+            <img src="images/hero-img.png" alt="">
+        </div>
+        <div class="item">
+            <img src="images/hero-img-1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="images/hero-img-2.png" alt="">
+        </div>
+        <div class="item">
+            <img src="images/hero-img-1.png" alt="">
+        </div>
+        <div class="item">
+            <img src="images/hero-img-2.png" alt="">
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script> <script> $(document).ready(function() {
+        $('.slick-slider').slick({
+            arrows: true,
+            infinite: true,
+            autoplay: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '20px',
+            autoplaySpeed: 1500,
+            dots: true,
+            fade: true,
+            adaptiveHeight: true,
+            responsive: [{
+                breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1 }
+                    },
+                    {
+                        breakpoint: 400,
+                        settings: {
+                            arrows: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1 }
+                        }]
+                            
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
